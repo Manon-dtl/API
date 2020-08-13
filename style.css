@@ -1,0 +1,57 @@
+
+.ask-weather {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+
+  .date-result {
+      text-align: center;
+  }
+
+ .container{
+     border: solid black 2px;
+     border-radius: 20px;
+     text-align: center;
+     background-color: rgb(31, 57, 92);
+     color: white;
+ }
+
+ h1 {
+ text-align: center;
+ }
+
+ .search{
+     padding: 30px;
+     margin-bottom: 20px;
+ }
+
+
+#city{
+    font-size: 50px;
+}
+
+#temperature{
+    font-size: 20px;
+}
+
+.hourly{
+    margin-top: 100px;
+    flex-wrap: nowrap;
+ 
+
+}
+
+.body{
+    background-color: rgb(21, 28, 34);
+}
+.col {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 100px;
+    scroll-padding-right: 100px;
+    
+
+ }
