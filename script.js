@@ -45,3 +45,9 @@ function updatePage(weather){
     }
 }
 
+function updateDay(date) {
+
+
+
+}
+}

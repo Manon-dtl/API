@@ -25,6 +25,7 @@
 
 #city{
     font-size: 50px;
+    margin-top: 50px;
 }
 
 #temperature{
@@ -41,8 +42,9 @@
 }
 
 .body{
-    background-image:url(https://data.1freewallpapers.com/download/starry-sky-stars-starfall-night.jpg);
+    background-image:url(https://images5.alphacoders.com/416/thumb-1920-416352.jpg);
     color: white;
+    border-radius: 50%;
 }
 
  .hourly{
