@@ -6,28 +6,22 @@
     display: block;
   }
   
-
-  .date-result {
+.date-result {
       text-align: center;
   }
 
- .container{
-     border: solid black 2px;
-     border-radius: 20px;
+.container{
      text-align: center;
-     background-color: rgb(31, 57, 92);
-     color: white;
  }
 
  h1 {
  text-align: center;
  }
 
- .search{
+.search{
      padding: 30px;
      margin-bottom: 20px;
  }
-
 
 #city{
     font-size: 50px;
@@ -37,21 +31,32 @@
     font-size: 20px;
 }
 
-.hourly{
+.test{  
     margin-top: 100px;
-    flex-wrap: nowrap;
- 
+    white-space: nowrap;
+    width: 30px;
+    display: inline-block;
+    overflow-x: scroll;
 
 }
 
 .body{
-    background-color: rgb(21, 28, 34);
+    background-image:url(https://data.1freewallpapers.com/download/starry-sky-stars-starfall-night.jpg);
+    color: white;
 }
-.col {
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 100px;
-    scroll-padding-right: 100px;
-    
 
+ .hourly{
+     
+     text-align: center;
+     align-items: center;
+     margin: 10px;
+     padding: 10px;
+     flex-wrap: nowrap;
+
+     
+ }
+
+ .hourlyBloc{
+     margin: 100px;
+     display: inline-block;
  }
