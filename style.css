@@ -43,16 +43,18 @@
 
 }
 
-.body{
+body{
     background-image:url(https://images5.alphacoders.com/516/thumb-1920-516021.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
+    
     color: black;
-    border-radius: 50%;
+
     font-family: 'HelveticaNeuefont';
     src: url('/assets/helvetica/helvetica-46-light-italic-587ebdb0ea724.ttf') format('opentype');
     }
 
-}
+
 
  .hourly{
      
@@ -110,3 +112,14 @@ padding:20px;
 
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(31, 30, 30);
+  }
+
+  .gif{
+
+height: 200px;
+position: absolute;
+left: 0;
+margin-top: 120px;
+margin-left: 50px;
+}
+
