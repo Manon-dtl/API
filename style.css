@@ -24,16 +24,18 @@
  }
 
 #city{
-    font-size: 50px;
+    font-size: 70px;
     margin-top: 50px;
 }
 
 #temperature{
-    font-size: 20px;
+    font-size: 50px;
 }
-
+#date {
+    font-size: 30px;
+}
 .test{  
-    margin-top: 100px;
+
     white-space: nowrap;
     width: 30px;
     display: inline-block;
@@ -42,9 +44,14 @@
 }
 
 .body{
-    background-image:url(https://images5.alphacoders.com/416/thumb-1920-416352.jpg);
-    color: white;
+    background-image:url(https://images5.alphacoders.com/516/thumb-1920-516021.jpg);
+    background-size: cover;
+    color: black;
     border-radius: 50%;
+    font-family: 'HelveticaNeuefont';
+    src: url('/assets/helvetica/helvetica-46-light-italic-587ebdb0ea724.ttf') format('opentype');
+    }
+
 }
 
  .hourly{
@@ -62,3 +69,44 @@
      margin: 100px;
      display: inline-block;
  }
+
+ .searchControl{
+ border-radius: 50px;
+ width: 200px;
+ height: 50px;
+ border: black;
+ padding-left: 20px;
+ padding-right: 20px;
+ }
+
+ .container-day{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .day-block{
+border: solid 1px white;
+margin-top: 5px;
+margin-bottom: 20px;
+padding:20px;
+ }
+    
+ ::-webkit-scrollbar{						
+    background-color: rgb(54, 53, 53);
+    width: 10px;
+    border-radius: 10px;
+ }
+
+::-webkit-scrollbar-track {
+    background: #9c8484;
+    border-radius: 10px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(71, 70, 70);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(31, 30, 30);

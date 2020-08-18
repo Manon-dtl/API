@@ -7,6 +7,7 @@ let date = document.querySelector("#date");
 let icon = document.querySelector('img');
 let hourlyTab = document.querySelector("#hourly");
 let cities = [];
+let firstDay = document.querySelector("#day");
 
 req.then(function(response){
     return response.json();
@@ -25,9 +26,8 @@ function updateMeteo(){
     })
     .catch(function () {
         alert('Erreur');
-    });
+    }); 
 }
-
 
 function updatePage(weather){
     temperature.textContent = weather.current_condition.tmp + "°C";
@@ -35,19 +35,28 @@ function updatePage(weather){
     date.textContent = weather.current_condition.date;
     icon.setAttribute("src" , weather.current_condition.icon_big);
 
+    
     let hourlyTab = Object.entries(weather.fcst_day_0.hourly_data);
     hourly.innerHTML = '';
     for(i = 0 ; i < hourlyTab.length ; i++){
         const [hour, data] = hourlyTab[i];
-        hourly.innerHTML += `<div class="hourlyBloc">`+ `<p>`+ hour + " " +`</p>`+ `<p>`+  data.TMP2m + "°" +`<p>` + `<img src="`+ data.ICON +`" ></img>`+` </p>` +`</div>`; 
-    
-        
+        hourly.innerHTML += `<div class="hourlyBloc">`+ `<p>`+ hour + " " +`</p>`+ `<p>`+  data.TMP2m + "°" +`<p>` + `<img src="`+ data.ICON +`" ></img>`+` </p>` +`</div>`;     
     }
-}
-
-function updateDay(date) {
 
 
+   firstDay= document.querySelector("#day");
+    firstDay.innerHTML = "";
+     for(i = 1 ; i < 5 ; i++){
+         const data = "fcst_day_"+[i];
+         firstDay.innerHTML += `<div class="day-block col-3">` + `<p>` +weather[data].date + " " +` </p> ` + `<p>`+  weather[data].tmax+ "°" +`<p>` + weather[data].day_long + `<p>` + `<img src="` + weather[data].icon + `"></img>` + `</p>` + `</div>`;
+     }
+    }
+    
+    var input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("searchBtn").click();
+      }
+    });
 
-}
-}
