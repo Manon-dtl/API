@@ -34,10 +34,10 @@ function updateMeteo() {
 function updatePage(weather) {
     temperature.textContent = weather.current_condition.tmp + "°C";
     city.textContent = weather.city_info.name;
-    date.textContent = weather.current_condition.date;
+    date.textContent = weather.fcst_day_0.day_long + " " + weather.current_condition.date;
     icon.setAttribute("src", weather.current_condition.icon_big);
-    wdirection.textContent = weather.current_condition.wnd_dir;
-    wspeed.textContent = weather.current_condition.wnd_spd;
+    wdirection.textContent = " C'est un vent du " + weather.current_condition.wnd_dir;
+    wspeed.textContent = " La vitesse du vent est de " + weather.current_condition.wnd_spd + "km/h";
 
 
     let hourlyTab = Object.entries(weather.fcst_day_0.hourly_data);
@@ -70,9 +70,13 @@ input.addEventListener("keyup", function (event) {
 });
 
 
-function show(windresult) {
-    document.getElementById(windresult).style.visibility = "visible";
+function show(windinfos) {
+    document.getElementById(windinfos).style.visibility = "visible";
   }
-  function hide(windresult) {
-    document.getElementById(windresult).style.visibility = "hidden";
+  function hide(windinfos) {
+    document.getElementById(windinfos).style.visibility = "hidden";
+  }
+
+  function updatetimetitle(){
+      let title= document.querySelector("#title");
   }

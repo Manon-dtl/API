@@ -11,6 +11,10 @@
 
 <body class="body">
 
+    <div id="title"> 
+     <h1> c'est moi </h1>
+    </div>
+
     <div class="container">
         <div id="city"></div>
 
@@ -18,15 +22,20 @@
             <input class="searchControl" type="text" placeholder="Nom de Ville" id="searchInput">
             <button class="searchControl" id="searchBtn" onclick="updateMeteo()">Recherche</button>
         </div>
-
+ 
         <div id="date"></div>
         <img src="" alt="image représentant le temps actuel">
-        <div> <img src="https://imperihome.com/wp-content/uploads/2017/10/eolienne.gif" class="gif" onMouseOver="show('windresult')" onMouseOut="hide('windresult')" ></div>
+        
+        
         <div id="windresult">
-            <div id="windspeed"></div>
-            <div id="winddirection"></div>
-            
+            <div> <img src="https://imperihome.com/wp-content/uploads/2017/10/eolienne.gif" class="gif" onMouseOver="show('windinfos')" onMouseOut="hide('windinfos')">
+                <div id="windinfos">
+                <div id="windspeed"></div>
+                <div id="winddirection"></div> 
+            </div>
+            </div>
         </div>
+
         <div id="temperature"></div>
 
 
