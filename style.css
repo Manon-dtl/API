@@ -44,10 +44,11 @@
 }
 
 body{
-    background-image:url(https://images5.alphacoders.com/516/thumb-1920-516021.jpg);
+    /* background-image:url(https://images5.alphacoders.com/516/thumb-1920-516021.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-attachment: fixed;
+    background-position: center;
     color: black;
 
     font-family: 'HelveticaNeuefont';
@@ -123,3 +124,6 @@ margin-top: 120px;
 margin-left: 50px;
 }
 
+.day-block{
+    background: linear-gradient(rgb(230, 226, 226), GREY);
+}
