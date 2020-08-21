@@ -1,26 +1,9 @@
-
-.ask-weather {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-  }
-  
-.date-result {
-      text-align: center;
-  }
-
 .container{
      text-align: center;
  }
 
  h1 {
  text-align: center;
- }
-
-.search{
-     padding: 30px;
-     margin-bottom: 20px;
  }
 
 #city{
@@ -31,47 +14,26 @@
 #temperature{
     font-size: 50px;
 }
+
 #date {
     font-size: 30px;
 }
-.test{  
 
+.hour{  
     white-space: nowrap;
     width: 30px;
     display: inline-block;
     overflow-x: scroll;
-
 }
 
 body{
-    /* background-image:url(https://images5.alphacoders.com/516/thumb-1920-516021.jpg); */
-    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     color: black;
-
     font-family: 'HelveticaNeuefont';
     src: url('/assets/helvetica/helvetica-46-light-italic-587ebdb0ea724.ttf') format('opentype');
     }
-
-
-
- .hourly{
-     
-     text-align: center;
-     align-items: center;
-     margin: 10px;
-     padding: 10px;
-     flex-wrap: nowrap;
-
-     
- }
-
- .hourlyBloc{
-     margin: 100px;
-     display: inline-block;
- }
 
  .searchControl{
  border-radius: 50px;
@@ -82,17 +44,27 @@ body{
  padding-right: 20px;
  }
 
- .container-day{
-     display: flex;
-     flex-direction: column;
- }
+ .search{
+    padding: 30px;
+    margin-bottom: 20px;
+}
 
- .day-block{
+.hourlybyhourly{
+    display: flex ;
+}
+
+ .dayBlock{
 border: solid 1px white;
 margin-top: 5px;
 margin-bottom: 20px;
 padding:20px;
+background: linear-gradient(rgb(230, 226, 226), GREY);
  }
+
+ .hourlyBlock{
+    margin: 100px;
+    display: inline-block;
+}
     
  ::-webkit-scrollbar{						
     background-color: rgb(54, 53, 53);
@@ -102,28 +74,22 @@ padding:20px;
 
 ::-webkit-scrollbar-track {
     background: #9c8484;
-    border-radius: 10px;
-    
-  }
+    border-radius: 10px;   
+}
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgb(71, 70, 70);
     border-radius: 10px;
-  }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: rgb(31, 30, 30);
-  }
+}
 
-  .gif{
-
+.gif{
 height: 200px;
 position: absolute;
 left: 0;
-margin-top: 120px;
+margin-top: 160px;
 margin-left: 50px;
-}
-
-.day-block{
-    background: linear-gradient(rgb(230, 226, 226), GREY);
 }
