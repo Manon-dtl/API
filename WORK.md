@@ -1,0 +1,1 @@
+Vendredi 21 Aout 8h01, je commence le refactoring.
