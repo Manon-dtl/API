@@ -47,22 +47,17 @@ function updatePage(weather) {
     hourly.innerHTML = '';
     for (i = 0; i < currenthourly.length; i++) {
         const [hour, data] = currenthourly[i];
-        hourly.innerHTML += `<div class="hourlyBlock">` + `<p>` + hour + " " 
-        + `</p>` + `<p>` + data.TMP2m + "°" + `<p>` + `<img src="` 
-        + data.ICON + `" ></img>` + ` </p>` + `</div>`;
+        hourly.innerHTML += `<div class="hourlyBlock"><p>${hour}</p><p>${data.TMP2m}°<p><img src=${data.ICON} ></img></p></div>`;
     }
 
     nextDay = document.querySelector("#day");
     nextDay.innerHTML = "";
     for (i = 1; i < 5; i++) {
         const data = "fcst_day_" + [i];
-        nextDay.innerHTML += `<div class="dayBlock col-3">` + `<p>` + weather[data].date + " " + ` </p> `
-            + `<p>` + weather[data].tmin + "°" + `/` +
-            weather[data].tmax + "°"
-            + `<p>` + weather[data].day_long
-            + `<p>` + `<img src="` + weather[data].icon + `"></img>` + `</p>` + `</div>`;
+        nextDay.innerHTML += `<div class="dayBlock col-3"><p>${weather[data].date}</p><p>${weather[data].tmin}°/</p><p>${weather[data].tmax}°</p><p>${weather[data].day_long}
+        <p><img src="${weather[data].icon}"></img></p></div>`;
+        }
     }
-}
 
 var input = document.getElementById("searchInput");
 input.addEventListener("keyup", function (event) {
