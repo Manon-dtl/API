@@ -36,7 +36,7 @@ function updatePage(weather) {
     city.textContent = weather.city_info.name;
     date.textContent = weather.fcst_day_0.day_long + " " + weather.current_condition.date;
     icon.setAttribute("src", weather.current_condition.icon_big);
-    windDirection.textContent = " C'est un vent du " + weather.current_condition.wnd_dir;
+    windDirection.textContent = " C'est un vent : " + weather.current_condition.wnd_dir;
     windSpeed.textContent = " La vitesse du vent est de " + weather.current_condition.wnd_spd + "km/h";
     currentConditions.textContent = weather.current_condition.condition;
 
@@ -54,7 +54,7 @@ function updatePage(weather) {
     nextDay.innerHTML = "";
     for (i = 1; i < 5; i++) {
         const data = "fcst_day_" + [i];
-        nextDay.innerHTML += `<div class="dayBlock col-3"><p>${weather[data].date}</p><p>${weather[data].tmin}°/</p><p>${weather[data].tmax}°</p><p>${weather[data].day_long}
+        nextDay.innerHTML += `<div class="dayBlock col-3"><p>${weather[data].date}</p><p>${weather[data].tmin}°/${weather[data].tmax}°</p><p>${weather[data].day_long}
         <p><img src="${weather[data].icon}"></img></p></div>`;
         }
     }
