@@ -10,18 +10,17 @@ let nextDay = document.querySelector("#day");
 let windDirection = document.querySelector("#winddirection");
 let windSpeed = document.querySelector("#windspeed");
 const currentConditions = document.querySelector("#weatherconditions");
+let cityWanted= document.getElementById("searchInput");
 
 request.then(function (response) {
     return response.json();
 })
-
     .then(function (askWeather) {
         updatePage(askWeather);
     });
 
-function updateMeteo() {
-    let cityWanted = document.getElementById("searchInput").value;
-    fetch(url + cityWanted)
+function updateMeteo(cityWanted) {
+    fetch(url + cityWanted.value)
         .then(response => response.json())
         .then(function (response) {
             updatePage(response);
